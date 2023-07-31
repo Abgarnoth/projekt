@@ -1,0 +1,100 @@
+body{
+font-size: 25px;
+padding: 10px;
+background-image: url(sil.jpg);
+background-position: center center;
+background-repeat: repeat;
+color: aliceblue;
+
+}
+#tryb {
+    font-size: 20px;
+    width: 300px;
+    height: 30px;
+    color: rgb(30, 30, 31);
+    background-color: aliceblue;
+}
+#wiek{
+    color: rgb(44, 45, 46);
+    background-color: aliceblue;
+    height: 25px;
+    width: 200px;
+    font-size: 20px;
+    border-radius: 5px;
+
+}
+#wzrost{
+    color: rgb(63, 66, 68);
+    background-color: aliceblue;
+    height: 25px;
+    width: 200px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+#waga{
+    color: rgb(38, 39, 39);
+    background-color: aliceblue;
+    height: 25px;
+    width: 200px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+#button{
+    font-size: 30px;
+    margin-left: 105px;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+#button:hover{
+    background-color: rgb(89, 131, 131);
+    cursor: pointer;
+}
+#male{
+    width: 25px;
+    height: 25px;
+}
+#male:hover{
+    cursor: pointer;
+}
+#female:hover{
+    cursor: pointer;
+}
+#female{
+    width: 25px;
+    height: 25px;
+}
+#wynik{
+    text-align: center;
+}
+#kontener{
+    display: block;
+    margin-left: 500px;
+    max-width: 350px;
+   
+    padding: 20px;
+    margin-top: 200px;
+}
+
+ 
+#wiek:focus {
+    background-color: rgb(129, 208, 230);
+}
+#waga:focus{
+    background-color: rgb(129, 208, 230);
+}
+#wzrost:focus {
+    background-color: rgb(129, 208, 230);
+}
+
+@media only screen and (max-width: 450px) {
+
+    #kontener {
+        max-width: 450px;
+        margin-top: 30px;
+        margin-left: 30px;
+        margin-right: 0;
+        padding: 0;
+        background-repeat: no-repeat;
+        
+    }
+}
