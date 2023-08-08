@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>kalorie</title>
+		<link rel="stylesheet" href="kcal.css" type="text/css" />
+	</head>
+	<body>
+		<div id="kontener">
+			<div class="flagi">
+				<a href="index.html"><img src="1p.png" alt="" /></a>
+				<a href="eng.html"><img src="1e.png" alt="" /></a>
+				<a href="ned.html"><img src="1n.png" alt="" /></a>
+			</div>
+			<label>Wiek w latach: </label><br />
+			<input type="tel" id="wiek" /> <br />
+			<label>Wzrost w cm:</label><br />
+			<input type="tel" id="wzrost" /><br />
+			<label>Waga w kg:</label><br />
+			<input type="tel" id="waga" /><br /><br />
+			<label>:</label><br /><br />
+
+			<input type="radio" id="male" name="plec" /> Mężczyzna<br />
+
+			<input type="radio" id="female" name="plec" /> Kobieta<br /><br />
+
+			<label>Wybierz tryb życia</label><br />
+			<select id="tryb" onchange="getSelectValue();">
+				<option disabled hidden selected>Wybierz</option>
+				<option value="1">
+					leżący lub siedzący tryb życia, brak aktywności fizycznej
+				</option>
+				<option value="1.2">
+					praca siedząca, aktywność fizyczna na niskim poziomie
+				</option>
+				<option value="1.4">
+					praca nie fizyczna, trening 2 razy w tygodniu
+				</option>
+				<option value="1.6">
+					lekka praca fizyczna, trening 3-4 razy w tygodniu
+				</option>
+				<option value="1.8">praca fizyczna, trening 5 razy w tygodniu</option>
+				<option value="2">
+					ciężka praca fizyczna, codzienny trening
+				</option></select
+			><br />
+
+			<button type="button" id="button">Oblicz</button><br /><br />
+
+			<script src="kcal.js"></script>
+
+			<div id="koniec">
+				twoje zapotrzebowanie kaloryczne wynosi <label id="wynik"></label> kcal
+				dziennie<br />
+				<label id="1"></label>g tłuszczu<br />
+				<label id="2"></label>g białka <br />
+				<label id="3"></label>g węglowodanów
+			</div>
+		</div>
+	</body>
+</html>
