@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="dietap.css">
+    <script defer src="dieta.js"></script>
+    
+</head>
+<body>
+    
+    <div id="kalkulator">
+        <div class="wymiary">
+        <div class="wiek">
+        <label for="wiek">Wiek w latach:</label> <input type="number" id="wiek" name="wiek"/></div>
+        <div class="wzrost">
+        <label for="wzrost">Wzrost w cm:</label><input type="number" id="wzrost" name="wzrost"/></div>
+        <div class="waga">
+        <label for="waga">Waga w kg:</label> <input type="number" id="waga" name="waga"/><br></div>
+    </div>
+        <div class="sprawdz">
+            <div class="plec">
+        <input type="radio" id="male" name="plec" /> Mężczyzna<input type="radio" id="female" name="plec"/> Kobieta</div>
+            
+        <div class="styl">
+        <label for="tryb">Wybierz tryb życia</label><br>
+			<select id="tryb" onchange="getSelectValue();">
+				<option disabled hidden selected>Wybierz</option>
+				<option value="1">
+					leżący lub siedzący tryb życia, brak aktywności fizycznej
+				</option>
+				<option value="1.2">
+					praca siedząca, aktywność fizyczna na niskim poziomie
+				</option>
+				<option value="1.4">
+					praca nie fizyczna, trening 2 razy w tygodniu
+				</option>
+				<option value="1.6">
+					lekka praca fizyczna, trening 3-4 razy w tygodniu
+				</option>
+				<option value="1.8">praca fizyczna, trening 5 razy w tygodniu</option>
+				<option value="2">
+					ciężka praca fizyczna, codzienny trening
+				</option></select></div><div class="oblicz">   
+                    <button type="button" id="oblicz">Oblicz</button></div> 
+        </div>
+    </div>
+    <div id="stickbar">       
+<div class="porownaj">
+    
+ <input type="text" id="wynik"/>
+ <input type="text" id="total"/>
+</div>
+<div class="instrukcje">
+instrukcje
+</div>
+  </div>
+    
+     <div id="baner">
+            tempore ipsum quia repellendus modi, cupiditate, quas eius sunt laudantium, molestias ipsam ut! Enim voluptatum numquam ea, libero quos voluptatibus aliquid perferendis? Commodi vitae, a error facere exercitationem ad adipisci incidunt doloribus architecto inventore minima eveniet tempora magni tenetur ducimus alias. Animi facere voluptate ipsa architecto aliquam, aperiam soluta quaerat molestias doloribus? Alias aliquam dicta eos provident ratione. Nulla, nesciunt deleniti molestias facilis accusantium illo possimus repellendus temporibus harum nisi amet reprehenderit.
+        </div>
+         
+     
+<div id="dania">
+            
+            <div class="s-low">
+                
+            <img src="oml.jpg" class="poka" onclick="poka1()"><input class="checkbox" name="papfasz" type="checkbox" value=313 onclick="UpdateCost(this);" >Omlet z warzywami<br>
+            <div id="rozwijka1">
+                <img src="om.jpg" class="ukryj" onclick="ukryj1()" width="190px" height="" style="float: left;">
+                Składniki dla <br>2 porcji:
+                <ul style="list-style: none;">
+                    <li>Jajko 2 szt.</li>
+                    <li>Cebula 50 g</li>
+                    <li>Pieczarki 25 g</li>
+                    <li>Szpinak 50 g</li>
+                    <li>Papryka czerwona <br>50 g</li>
+                    <li>Ser edamski 50 g</li>
+                    <li>Olej rzepakowy <br>
+                       24 ml</li>
+                </ul> Przepis na omlet z warzywami:<br>
+                <ul>
+                    <li>Na patelni rozgrzej olej.</li>
+                    <li>Pieczarki drobno pokrój i podsmaż <br>na patelni. Przełóż do miseczki żeby<br> ostygły.</li>
+                    <li>Jajka wbij do miski, ubij delikatnie <br>trzepaczką.</li>
+                    <li>Szpinak delikatnie posiekaj, <br>paprykę i cebulę drobno pokrój, <br>ser zetrzyj na tarce. Dodaj wszystko <br>do jajek.</li>
+                    <li>Jajka dokładnie wymieszaj z <br>warzywami, dopraw 1/4 łyżeczki <br>soli i pieprzu.</li>
+                    <li>Rozgrzej patelnię, na której smażone były pieczarki i wylej masę jajeczną.</li>
+                    <li>Smaż na małym ogniu pod  <br>przykryciem przez 5 minut aż góra  <br>będzie ścięta.</li>
+                </ul>
+               
+            </div>
+            <img src="pieczonaowsianka.jpg" width="55px" class="poka" onclick="poka2()"><input class="checkbox" type="checkbox" value= 257 onclick="UpdateCost(this);">Pieczona owsianka z jabłkiem<br>
+            <div id="rozwijka2">
+                <img src="pieczonaowsianka.jpg" width="190px" style="float: left;" class="ukryj" onclick="ukryj2()">Składniki dla 1 <br>porcji:
+                <ul style="list-style: none;">
+                    <li>Jabłko 180 g</li>
+                    <li>Płatki owsiane 50 g</li>
+                    <li>Mleko 1,5% 120 ml</li>
+                    <li>Miód 12 g</li>
+                    <li>Cynamon 2 g</li>
+                    <li>Orzechy włoskie <br>15 g</li>
+                </ul><br><br>Przepis na pieczoną owsiankę z jabłkiem:<br>
+                <ul>
+                    <li>Do szklanego naczynia wsyp płatki <br>owsiane i zalej mlekiem.</li>
+                    <li>Dodaj starte jabłko lub pokrojone w <br>drobną kosteczkę.</li>
+                    <li>Całość dokładnie wymieszaj.</li>
+                    <li>Następnie dodaj miód, cynamon i <br>posiekane orzechy włoskie.</li>
+                    <li>Całość ponownie dokładnie wymieszaj.</li>
+                    <li>Owsiankę piecz w 180 st. C przez około <br>25 minut.</li>
+                </ul>
+             </div>
+            <img src="oml.jpg"><input class="checkbox" type="checkbox" value= 253 onclick="UpdateCost(this);">schab<p class="poka" onclick="poka()">poka</p><br>
+            <img src="oml.jpg"><input class="checkbox" type="checkbox" value= 579 onclick="UpdateCost(this);">omlet<p class="poka" onclick="poka()">poka</p>
+            
+            
+        
+        </div>
+
+        
+        
+        <div class="s-medium">
+            
+            <img src="oml.jpg"><input class="checkbox" type="checkbox" value= "257" onclick="UpdateCost(this);">kasza<p class="poka" onclick="poka()">poka</p><br>
+            <img src="oml.jpg"><input class="checkbox" type="checkbox" value= 340 onclick="UpdateCost(this);">zupa<p class="poka" onclick="poka()">poka</p><br>
+            <img src="oml.jpg"><input class="checkbox" type="checkbox" value= 367 onclick="UpdateCost(this);">kurczak<p class="poka" onclick="poka()">poka</p><br>
+            <img src="oml.jpg"><input class="checkbox" type="checkbox" value= 140 onclick="UpdateCost(this);">kotleciki<p class="poka" onclick="poka()">poka</p><br>
+        
+        </div>
+        <div class="s-high">
+            
+            <img src="oml.jpg"> <input class="checkbox" type="checkbox" value= 47 onclick="UpdateCost(this);">jablko<p class="poka" onclick="poka()">poka</p><br>
+            <img src="oml.jpg"><input class="checkbox" type="checkbox" value= 88 onclick="UpdateCost(this);">banan<p class="poka" onclick="poka()">poka</p><br>
+            <img src="oml.jpg"><input class="checkbox" type="checkbox" value= 30 onclick="UpdateCost(this);">arbuz 100g<p class="poka" onclick="poka()">poka</p><br>
+            <img src="oml.jpg"><input class="checkbox" type="checkbox" value= 32 onclick="UpdateCost(this);">truskawki 100g<p class="poka" onclick="poka()">poka</p><br>
+        
+        </div>
+        
+    
+    </div>
+    
+    <div id="sklad">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, beatae eum, dolores ut excepturi exercitationem nihil fugit itaque, voluptas corrupti deserunt dolorem iste enim molestiae error recusandae rem eaque assumenda ipsum. Dolorem dolores dolore soluta earum, magnam nobis debitis velit dicta sapiente, consectetur consequatur deleniti! Distinctio, cupiditate id aliquam nulla voluptatum itaque rerum dolor! Vero odio aut totam inventore ducimus, consequatur officia harum maiores, ea voluptatem at rem odit aliquam tempore praesentium distinctio quia explicabo vitae quas nam rerum assumenda reprehenderit porro! Maiores incidunt, officia neque, soluta ullam magnam deserunt est eum error veritatis commodi nulla quo perferendis saepe illum!
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi quibusdam, doloremque, nobis sunt cumque numquam exercitationem debitis veniam obcaecati, distinctio quos veritatis tempore ipsum iste omnis non ullam accusamus? Repudiandae, tempora. Minus, nulla consequatur maiores dignissimos placeat soluta eligendi odit impedit quis aliquid error facere dicta deleniti et repellendus totam est at sunt voluptas laborum doloremque natus nobis! Nobis labore fugit provident doloribus eveniet magnam voluptates rerum iusto voluptatem laboriosam, ipsum culpa vel quisquam minus esse, aliquam ipsam praesentium voluptas dolorum incidunt. Totam ab, voluptas architecto molestiae cumque nulla numquam quo ipsam. Cupiditate laudantium aliquid consectetur eaque, sint beatae nulla?
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure cupiditate, quam illum quo consectetur possimus deserunt amet eius atque explicabo!
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae incidunt ullam, possimus voluptatem cumque laudantium in iure numquam deserunt dolores hic perferendis eos earum, ducimus rerum libero tempora repudiandae, facilis illo? Assumenda autem officiis amet excepturi facilis aliquam quod ipsa consequatur accusamus non quo, aspernatur numquam ad obcaecati nulla officia deserunt maiores? Praesentium nulla explicabo tenetur voluptas voluptate atque aliquam quam odio deserunt alias. Quis incidunt ab fuga placeat, ipsa earum, officiis dolor error debitis officia velit eos id obcaecati.    
+</div>
+
+
+</body>
+</html>
